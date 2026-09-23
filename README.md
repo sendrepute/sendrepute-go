@@ -6,7 +6,7 @@ SendRepute customer classification endpoint.
 ## Installation
 
 ```sh
-go get github.com/sendrepute/sendrepute-go@main
+go get github.com/sendrepute/sendrepute-go@v0.1.0
 ```
 
 For source builds and offline tests:
