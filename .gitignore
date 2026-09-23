@@ -1,0 +1,8 @@
+dist/
+.env
+.env.*
+.npmrc
+*.test
+*.out
+*.log
+.DS_Store
