@@ -13,6 +13,9 @@ var files = []string{
 	"LICENSE",
 	"README.md",
 	"client.go",
+	"services.go",
+	"services_generated.go",
+	"services_test.go",
 	"go.mod",
 	"types.go",
 	"examples/basic/main.go",
@@ -36,7 +39,7 @@ func main() {
 	if err := os.MkdirAll(outputDir, 0o755); err != nil {
 		panic(err)
 	}
-	output := filepath.Join(outputDir, "sendrepute-go-v0.1.0.zip")
+	output := filepath.Join(outputDir, "sendrepute-go-v0.1.1.zip")
 	temporary := output + ".tmp"
 	file, err := os.OpenFile(temporary, os.O_CREATE|os.O_TRUNC|os.O_WRONLY, 0o644)
 	if err != nil {
@@ -87,7 +90,7 @@ func add(writer *zip.Writer, root, name string) error {
 	if err != nil {
 		return err
 	}
-	header.Name = "sendrepute-go-v0.1.0/" + filepath.ToSlash(name)
+	header.Name = "sendrepute-go-v0.1.1/" + filepath.ToSlash(name)
 	header.Method = zip.Deflate
 	destination, err := writer.CreateHeader(header)
 	if err != nil {

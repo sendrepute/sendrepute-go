@@ -1,5 +1,20 @@
 # SendRepute Go integration
 
+## Customer services
+
+`Client.Request(ctx, operation, ServiceInput)` supports all 49 operations in the
+customer-only API contract. For example:
+
+```go
+account, err := client.Request(ctx, "customerGetAccount", sendrepute.ServiceInput{})
+```
+
+Use `Body`, `Path` and `Query` for the operation's documented fields. Every
+non-GET operation requires `AuthorizeMutation: true` on that request, separately
+from mail classification consent. Obtain and review current quotes and submit
+expected prices before authorizing paid services. Requests are bounded and never
+retried automatically. Keep result/recovery IDs after ambiguous failures.
+
 An installable, standard-library-only, server-side Go client for the paid
 SendRepute customer classification endpoint.
 
