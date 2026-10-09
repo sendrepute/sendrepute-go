@@ -21,7 +21,7 @@ SendRepute customer classification endpoint.
 ## Installation
 
 ```sh
-go get github.com/sendrepute/sendrepute-go@v0.1.0
+go get github.com/sendrepute/sendrepute-go@v0.1.1
 ```
 
 For source builds and offline tests:
@@ -104,7 +104,7 @@ Create the distributable source archive with the allowlist-only packager:
 go run ./scripts/package.go
 ```
 
-It writes `dist/sendrepute-go-v0.1.0.zip`, rejects symlinks and
+It writes `dist/sendrepute-go-v0.1.1.zip`, rejects symlinks and
 non-regular source files, and includes only the module files explicitly listed
 in the packaging source. The ZIP is for local distribution; it does not publish
 the GitHub repository.

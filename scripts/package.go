@@ -15,7 +15,6 @@ var files = []string{
 	"client.go",
 	"services.go",
 	"services_generated.go",
-	"services_test.go",
 	"go.mod",
 	"types.go",
 	"examples/basic/main.go",
